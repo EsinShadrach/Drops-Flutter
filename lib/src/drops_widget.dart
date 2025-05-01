@@ -367,17 +367,20 @@ class _DropsWidgetState extends State<_DropsWidget>
                                   widget.title,
                                   maxLines: widget.titleMaxLines,
                                   overflow: TextOverflow.ellipsis,
-                                  style:
-                                      widget.titleTextStyle ??
-                                      TextStyle(
-                                        color:
-                                            widget.highContrastText
-                                                ? CupertinoColors.label
-                                                    .resolveFrom(context)
-                                                : CupertinoColors.secondaryLabel
-                                                    .resolveFrom(context),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
+                                  style: (widget.titleTextStyle ??
+                                          TextStyle(
+                                            color:
+                                                widget.highContrastText
+                                                    ? CupertinoColors.label
+                                                        .resolveFrom(context)
+                                                    : CupertinoColors
+                                                        .secondaryLabel
+                                                        .resolveFrom(context),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                          ))
+                                      .copyWith(
+                                        decoration: TextDecoration.none,
                                       ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -390,19 +393,25 @@ class _DropsWidgetState extends State<_DropsWidget>
                                         widget.subtitle!,
                                         maxLines: widget.subtitleMaxLines,
                                         overflow: TextOverflow.ellipsis,
-                                        style:
-                                            widget.subtitleTextStyle ??
-                                            TextStyle(
-                                              color:
-                                                  widget.highContrastText
-                                                      ? CupertinoColors
-                                                          .secondaryLabel
-                                                          .resolveFrom(context)
-                                                      : CupertinoColors
-                                                          .tertiaryLabel
-                                                          .resolveFrom(context),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
+                                        style: (widget.subtitleTextStyle ??
+                                                TextStyle(
+                                                  color:
+                                                      widget.highContrastText
+                                                          ? CupertinoColors
+                                                              .secondaryLabel
+                                                              .resolveFrom(
+                                                                context,
+                                                              )
+                                                          : CupertinoColors
+                                                              .tertiaryLabel
+                                                              .resolveFrom(
+                                                                context,
+                                                              ),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
+                                                ))
+                                            .copyWith(
+                                              decoration: TextDecoration.none,
                                             ),
                                         textAlign: TextAlign.center,
                                       ),
