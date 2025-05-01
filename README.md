@@ -73,11 +73,17 @@ Heres the full list of parameters that you can use to adjust the Drop to match y
     EdgeInsets? padding,
     DropShape shape
     bool highContrastText
-    Color? iconColor 
-    int titleMaxLines  
-    int subtitleMaxLines  
+    Color? iconColor
+    int titleMaxLines
+    int subtitleMaxLines
 ```
 
 ## Additional information
 
 Report any bugs if any via github.
+
+## TODO
+
+- [x] Fix yellow underlines that shows up when using drops in an app without cupertino ancestor
+- [ ] add action button for drops
+- [ ] add theming to drops (Road map to material)
